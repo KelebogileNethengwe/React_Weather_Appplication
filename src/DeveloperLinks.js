@@ -1,15 +1,16 @@
 import React from 'react';
+import "./DeveloperLinks.css";
 
 export default function DeveloperLinks() {
     return (
       <div className="DeveloperLinks">
         Open{" "}
         <a href="https://github.com/KelebogileNethengwe/React_Weather_App">
-          source code
-        </a>{" "}
-        by,
+          source code by 
+        </a> {" "}
+         
         <a href="https://www.linkedin.com/in/kelebogile-nethengwe-5a8981212/">
-          Kelebogile Nethengwe
+           Kelebogile Nethengwe
         </a>
       </div>
     );
