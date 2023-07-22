@@ -21,7 +21,10 @@ export default function MainWeather() {
         <span id="weather-temperature">18</span>
         <span class="unit">
           <sup>
-            <a href="#" id="celsius">
+            <a
+              href="https://github.com/KelebogileNethengwe/React_Weather_App/tree/main"
+              id="celsius"
+            >
               ° C{" "}
             </a>{" "}
           </sup>
