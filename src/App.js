@@ -1,14 +1,17 @@
 
 import "./App.css";
-import Weather from "./Weather";
+import SearchForm from "./SearchForm";
+import MainWeather from "./MainWeather";
+import ExtraWeatherInfo from "./ExtraWeatherInfo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello World</h1>
-        <Weather />
-      </header>
+      <div className="weatherContainer">
+        <SearchForm />
+        <MainWeather />
+        <ExtraWeatherInfo />
+      </div>
     </div>
   );
 }
