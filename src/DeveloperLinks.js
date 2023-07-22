@@ -7,9 +7,9 @@ export default function DeveloperLinks() {
         Open{" "}
         <a href="https://github.com/KelebogileNethengwe/React_Weather_App">
           source code
-        </a>{" "}
+        </a>{" "}by{" "}
         <a href="https://www.linkedin.com/in/kelebogile-nethengwe-5a8981212/">
-          by Kelebogile Nethengwe
+           Kelebogile Nethengwe
         </a>
       </div>
     );
