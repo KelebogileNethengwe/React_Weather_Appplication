@@ -1,0 +1,23 @@
+.WeatherForecast {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  left: 11px;
+  top: 10px;
+}
+
+#weekly-forecast-icon {
+  margin-left: -14px;
+}
+
+.max-temperature {
+  margin-right: 10px;
+  margin-left: -4px;
+}
+.min-temperature {
+  color: #597e9b;
+}
