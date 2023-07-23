@@ -8,6 +8,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+body{
+  background-image: url(rainyNight.jpg);
+}
 
 .weatherContainer {
   background: #171717;
