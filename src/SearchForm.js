@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Circles } from "react-loader-spinner";
+
 
 
 import "./App.css";
@@ -113,6 +115,16 @@ export default function SearchForm(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleresponse);
-    return 'Loading...';
+    return (
+      <Circles
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
+    );
   }
 }
