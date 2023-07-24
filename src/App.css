@@ -20,9 +20,114 @@ body{
   margin: 4rem auto;
   border-radius: 10px;
 }
+.CitySearch{
+  border: none;
+  background: #1e1e1e;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+}
 
+.CitySearch::placeholder {
+  color: #fff;
+}
+.city-search-button {
+  padding: 0 20px 0 20px;
+  border: none;
+  outline: none;
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  color: #141010;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.current-location-button {
+  border: none;
+  outline: none;
+  padding: 8px 30px;
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  color: #141010;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  margin-left: 210px;
+}
+.MainWeatherInfo {
+  text-align: center;
+  margin-top: 3rem;
+}
+#datetime {
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
 
+.weather_icon img {
+  width: 100px;
+}
 
+#weather-temperature {
+  font-size: 1.75rem;
+}
 
+.unit {
+  font-size: 20px;
+  position: relative;
+  top: -12px;
+}
+
+a:link {
+  text-decoration: none;
+}
+.weather_card {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  left: -2px;
+}
+
+.weather_card i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.weather_card p {
+  font-size: 14px;
+}
+.WeatherForecast {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  top: 10px;
+}
+
+#weekly-forecast-icon {
+  margin-left: -14px;
+}
+
+.max-temperature {
+  margin-right: 10px;
+  margin-left: -4px;
+}
+.min-temperature {
+  color: #597e9b;
+}
 
 
