@@ -3,13 +3,11 @@ import axios from "axios";
 import { Circles } from "react-loader-spinner";
 import MainWeather from "./MainWeather";
 
-
-
 import "./App.css";
 
 export default function SearchForm(props) {
- const [city, setCity] = useState(props.defaultCity);
-  const [weather, setWeather] = useState({loaded: false});
+  const [city, setCity] = useState(props.defaultCity);
+  const [weather, setWeather] = useState({ loaded: false });
   function handleresponse(response) {
     console.log(response.data);
 
@@ -20,35 +18,27 @@ export default function SearchForm(props) {
       city: response.data.name,
       humidity: response.data.main.humidity,
       feelslike: response.data.main.feels_like,
-      date: new Date(response.data.dt *1000),
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      iconUrl: "https://openweathermap.org/img/wn/04d@2x.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-  
   }
-
 
   function search() {
- let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
- let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
- axios.get(apiUrl).then(handleresponse);
+    axios.get(apiUrl).then(handleresponse);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
 
-
-function handleSubmit(event) {
- 
-  event.preventDefault();
-  search()
-}
-
-
-
-function handleCityChange(event) {
-  setCity(event.target.value);
-}
-
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
 
   if (weather.loaded) {
     return (
@@ -77,7 +67,6 @@ function handleCityChange(event) {
   } else {
     search();
 
-  
     return (
       <Circles
         height="80"
