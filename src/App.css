@@ -22,7 +22,7 @@ body{
 }
 .CitySearch{
   border: none;
-  background: #1e1e1e;
+  background: #38598b;
   outline: none;
   color: #fff;
   padding: 0.5rem 2.5rem;
@@ -34,6 +34,7 @@ body{
 }
 .city-search-button {
   padding: 0 20px 0 20px;
+  margin-left:10px;
   border: none;
   outline: none;
   background: radial-gradient(
@@ -78,6 +79,12 @@ body{
 #weather-temperature {
   font-size: 1.75rem;
 }
+#description{
+  font-size: 18px;
+  position: relative;
+  top: -18px;
+}
+
 
 .unit {
   font-size: 20px;
