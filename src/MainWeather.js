@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import TodaysDate from "./TodaysDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
+
 export default function MainWeather(props) {
   return (
     <div className="MainWeatherInfo">
@@ -15,23 +17,9 @@ export default function MainWeather(props) {
       <div className="weather_icon">
         <WeatherIcon code={props.data.icon} />
       </div>
-
-      <p>
-        <span id="weather-temperature">
-          {Math.round(props.data.temperature)}
-        </span>
-        <span class="unit">
-          <sup>
-            <a
-              href="https://github.com/KelebogileNethengwe/React_Weather_App/tree/main"
-              id="celsius"
-            >
-              ° C{" "}
-            </a>{" "}
-          </sup>
-        </span>
-      </p>
-
+<p>
+   <WeatherTemperature celsius={props.data.temperature} />   
+</p>
       <div className="weather_info row">
         <div className="weather_card col">
           <i className="fa-solid fa-droplet"></i>
