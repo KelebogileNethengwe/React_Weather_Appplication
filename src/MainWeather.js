@@ -3,6 +3,7 @@ import "./App.css";
 import TodaysDate from "./TodaysDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeeklyWeatherForecast from "./WeeklyWeatherForecast";
 
 export default function MainWeather(props) {
   return (
@@ -17,9 +18,9 @@ export default function MainWeather(props) {
       <div className="weather_icon">
         <WeatherIcon code={props.data.icon} />
       </div>
-<p>
-   <WeatherTemperature celsius={props.data.temperature} />   
-</p>
+      <p>
+        <WeatherTemperature celsius={props.data.temperature} />
+      </p>
       <div className="weather_info row">
         <div className="weather_card col">
           <i className="fa-solid fa-droplet"></i>
@@ -49,7 +50,9 @@ export default function MainWeather(props) {
           </div>
         </div>
       </div>
-      <div className="WeatherForecast row" id="forecast"></div>
+      <div className="WeatherForecast row" id="forecast">
+        <WeeklyWeatherForecast />
+      </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Circles } from "react-loader-spinner";
 import MainWeather from "./MainWeather";
 
+
 import "./App.css";
 
 export default function SearchForm(props) {
@@ -61,6 +62,7 @@ export default function SearchForm(props) {
             </button>
           </form>
           <MainWeather data={weather} />
+          
         </div>
       </div>
     );
