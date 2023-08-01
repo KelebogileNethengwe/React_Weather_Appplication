@@ -16,7 +16,7 @@ export default function MainWeather(props) {
         <p id="description">{props.data.description}</p>
       </div>
       <div className="weather_icon">
-        <WeatherIcon code={props.data.icon} />
+        <WeatherIcon code={props.data.icon} size={"150px"} />
       </div>
       <p>
         <WeatherTemperature celsius={props.data.temperature} />
