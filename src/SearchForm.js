@@ -3,8 +3,8 @@ import axios from "axios";
 import { Circles } from "react-loader-spinner";
 import MainWeather from "./MainWeather";
 
-
 import "./App.css";
+import WeeklyWeatherForecast from "./WeeklyWeatherForecast";
 
 export default function SearchForm(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -14,6 +14,7 @@ export default function SearchForm(props) {
 
     setWeather({
       loaded: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
@@ -62,7 +63,7 @@ export default function SearchForm(props) {
             </button>
           </form>
           <MainWeather data={weather} />
-          
+          <WeeklyWeatherForecast coordinates={weather.coordinates} />
         </div>
       </div>
     );
