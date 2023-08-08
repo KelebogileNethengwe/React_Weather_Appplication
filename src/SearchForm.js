@@ -58,7 +58,6 @@ export default function SearchForm(props) {
             <button class="city-search-button">
               <i className="fa-solid fa-magnifying-glass" value="submit"></i>
             </button>
-            <button className="current-location-button">
             
           </form>
           <MainWeather data={weather} />
