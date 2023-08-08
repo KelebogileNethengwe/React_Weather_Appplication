@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Circles } from "react-loader-spinner";
 import MainWeather from "./MainWeather";
-
-import "./App.css";
 import WeeklyWeatherForecast from "./WeeklyWeatherForecast";
+import "./App.css";
 
 export default function SearchForm(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -58,7 +57,6 @@ export default function SearchForm(props) {
             <button class="city-search-button">
               <i className="fa-solid fa-magnifying-glass" value="submit"></i>
             </button>
-            
           </form>
           <MainWeather data={weather} />
           <WeeklyWeatherForecast coordinates={weather.coordinates} />
