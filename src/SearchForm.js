@@ -59,8 +59,7 @@ export default function SearchForm(props) {
               <i className="fa-solid fa-magnifying-glass" value="submit"></i>
             </button>
             <button className="current-location-button">
-              current location
-            </button>
+            
           </form>
           <MainWeather data={weather} />
           <WeeklyWeatherForecast coordinates={weather.coordinates} />

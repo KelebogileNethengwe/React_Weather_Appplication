@@ -41,8 +41,10 @@ export default function WeeklyWeatherForecast(props) {
     let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(handleResponse);
     return null;
   }
 }
+
+
